@@ -32,6 +32,27 @@ h1, h2, h3 {
   border: none;
 }
 
+.navbar-default .navbar-brand {
+  //We added .navbar-default infront of .navbar-brand because we needed more specificity to overwrite the default settings for .navbar-default .navbar-brand. Just setting .navbar-brand did not work because it was not specific enough.
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  //Specificity as above
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: white;
+  opacity: 0.75;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  //Specificity as above
+  color: white;
+  opacity: 0.75;
+}
+
 .home-callout {
   color: white;
   margin-top: -20px;
