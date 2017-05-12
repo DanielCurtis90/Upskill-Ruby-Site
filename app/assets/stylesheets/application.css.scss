@@ -31,8 +31,14 @@ h1, h2, h3 {
   background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+//Nav Styles
 .navbar {
   border: none;
+}
+
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
 }
 
 .navbar-default .navbar-brand,
