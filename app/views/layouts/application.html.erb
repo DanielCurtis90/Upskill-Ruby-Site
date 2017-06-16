@@ -34,7 +34,8 @@
     
     <div class="container">
       <% flash.each do |key, value| %>
-        <%= content_tag :div, value, class: "alert alert-#{key}" %>
+        <%= content_tag :div, value, class: "alert alert-#{key}" %>  
+        <!-- The class: alert blurb is how we colour code the div that contains the value of the flash hash -->
       <% end %>
     </div>
     
