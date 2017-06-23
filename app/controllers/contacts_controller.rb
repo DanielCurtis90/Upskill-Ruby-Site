@@ -7,8 +7,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params) #[error1, error2, ..] from contact_params
     if @contact.save
       #This lifts the information entered on the form before it's sent to the database
-      #The information is grabbed from the Parameters hash that is sent when submit is pressed
-      # :contact refers to one of the keys in the Parameters hash, :name etc refers to the next key pointing to our form data
+      #The information is grabbed from the Parameters hash that is sent when submit is pressed, the info we need is nested
+      # :contact refers to one of the keys in the Parameters hash, :name etc refers to the next key pointing to the data we want
       name = params[:contact][:name] 
       email = params[:contact][:email] 
       body = params[:contact][:comments] 
