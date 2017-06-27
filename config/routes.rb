@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   resources :contacts, only: :create #If limiting more than one, enter them in an array ie: [:new, :create, :etc]
