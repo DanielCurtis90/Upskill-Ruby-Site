@@ -18,6 +18,7 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
+  <!-- The following fields wont go to database, due to their tags and name:nil. They are being sent to Scripe via Js -->
   <div class="field form-group">
     <%= label_tag :card_number, "Credit Card Number" %>
     <%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
