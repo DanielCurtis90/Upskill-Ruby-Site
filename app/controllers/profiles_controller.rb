@@ -16,7 +16,9 @@ class ProfilesController < ApplicationController
   @profile = @user.build_profile( profile_params )
     if @profile.save
       flash[:success] = "Profile updated!"
-      redirect_to root_path
+      # The user_path uses :id, however the query string parameter from the 
+      # profiles page is using :user_id, so that's where the parameter is found
+      redirect_to user_path( params[:user_id] )
     else
       render action: :new
     end
