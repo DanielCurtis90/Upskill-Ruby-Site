@@ -1,4 +1,5 @@
-<%= form_for @profile, url: user_profile_path do |f| %>
+<!-- html multipart is needed for a form that has both text and file fields -->
+<%= form_for @profile, url: user_profile_path, :html => { :multipart => true } do |f| %>
   <div class="form-group">
     <%= f.label :first_name %>
     <%= f.text_field :first_name, class: 'form-control' %>
@@ -6,6 +7,10 @@
   <div class="form-group">
     <%= f.label :last_name %>
     <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, class: 'form-control' %>
   </div>
   <div class="form-group">
     <%= f.label :job_title %>
