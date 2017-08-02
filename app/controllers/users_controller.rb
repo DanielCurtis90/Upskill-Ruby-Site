@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    
+    # Avoid using User.all because that's a lot of queries
+    @users = User.includes(:profile)
   end
   
   # GET to /users/:id
